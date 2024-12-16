@@ -9,5 +9,7 @@ public class Main {
         System.out.println(mono2.getCuidador());
         System.out.println(mono3.getCuidador());
         System.out.println(mono3);
+        mono1.setCuidador("Javi");
+        System.out.println(mono1);
     }
 }
