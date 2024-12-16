@@ -12,5 +12,7 @@ public class Main {
         System.out.println(mono3);
         mono1.setCuidador("Javi");
         System.out.println(mono1);
+        Mono mono = EntradaSalida.dameMono();
+        System.out.println(mono);
     }
 }

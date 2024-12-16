@@ -6,6 +6,7 @@ public class EntradaSalida {
         Scanner lector = new Scanner(System.in);
         System.out.println("Introduce: 1. mono estándar 2. mono personalizado");
         int opcion = lector.nextInt();
+        lector.nextLine();
         if (opcion==1)
             nuevoMono = new Mono();
         else {
