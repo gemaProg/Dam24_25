@@ -19,7 +19,7 @@ public class Mono {
         this.cuidador = cuidador;
     }
    public Mono(){
-       this.nombre = Nombres.cuidadores[(int)(Math.random()*Nombres.cuidadores.length)];
+       this.nombre = Nombres.nombres[(int)(Math.random()*Nombres.cuidadores.length)];
        this.edad = (int)(Math.random()*100);
        this.peso = 15;
        this.hembra = true;
