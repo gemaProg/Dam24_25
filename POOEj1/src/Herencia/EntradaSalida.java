@@ -1,4 +1,5 @@
-import java.sql.SQLOutput;
+package Herencia;
+
 import java.util.Scanner;
 
 public class EntradaSalida {
