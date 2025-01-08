@@ -2,7 +2,7 @@ package Herencia;
 
 import java.util.Arrays;
 
-public class Main {
+public class Tester {
 
     public static void main(String[] args) {
         Animal [] listaAnimales = new Animal[20];
