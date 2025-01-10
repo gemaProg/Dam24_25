@@ -51,15 +51,16 @@ public class TesterZoo {
                 case 4:
                     // Este proceso lo voy a hacer "a la antigua", sin
                     // llamar a un procedimiento
-                    System.out.println("Indique la posición del animal (0-"+(.length-1)+"): ");
+                    System.out.println("Indique la posición del animal (0-"+(zoo.getLista().length-1)+"): ");
                     aux= lector.nextInt();
                     lector.nextLine();
 
                     System.out.println("Indique el nombre del nuevo cuidador: ");
                     nuevo_cuidador= lector.nextLine();
 
-                    if ((aux>=0) && (aux <= .length-1)) {
-                        [aux].setCuidador(nuevo_cuidador);
+                    if ((aux>=0) && (aux <= zoo.getLista().length-1)) {
+                        Animal listaAux[] = zoo.getLista();
+                        listaAux[aux].setCuidador(nuevo_cuidador);
                         System.out.println("Cambiado!");
                     }
                     else
