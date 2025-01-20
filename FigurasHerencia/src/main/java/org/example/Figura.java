@@ -24,6 +24,6 @@ public abstract class Figura {
     public String toString() {
         return this.getClass().getSimpleName() +
                 "-"+termino()+"= " + dimension + "\nÁrea del "+ this.getClass().getSimpleName()+ " "+String.format("%.2f",this.calcularArea())+
-                "\nPerímetro del "+this.getClass().getSimpleName()+" "+String.format("%.2f",calcularPerimetro());
+                "\nPerímetro del "+this.getClass().getSimpleName()+" "+String.format("%.2f",calcularPerimetro())+"\n";
     }
 }
