@@ -82,10 +82,16 @@ public class Figuras {
         return modificado;
     }
 
-    public boolean modificarFiguraEspecifico(int posicion2, double dato) {
+    /**
+     * Método que permite modificar el color de un círculo
+     * @param posicion2 identifica la posición del círculo a actualizar en la lista de figuras
+     * @param color color actualizado
+     * @return true si el cículo ha sido actualizado con éxito
+     */
+    public boolean modificarFiguraEspecifico(int posicion2, String color) {
         boolean modificado= false;
         if (lista[posicion2]!=null && lista[posicion2] instanceof Circulo){
-            ((Circulo) lista[posicion2]).setDimension(dato);
+            ((Circulo) lista[posicion2]).setColor(color);
             modificado=true;
         }
         return modificado;
