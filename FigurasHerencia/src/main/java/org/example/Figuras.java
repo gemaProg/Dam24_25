@@ -23,14 +23,17 @@ public class Figuras {
         }
 
     }
-    /*
-    System.out.println("G1. Mostrar el array");
-    System.out.println("G2. Agregar una figura en la lista");
-    System.out.println("G3. Eliminar una figura de la lista");
-    * */
+
     public boolean agregarFigura (Figura figura){
         //buscar hueco y meter figura
-        return false;
+        boolean introducido=false;
+        for (int i = 0; i < lista.length && !introducido; i++) {
+            if (lista[i]==null) {
+                lista[i] = figura;
+                introducido = true;
+            }
+        }
+        return introducido;
     }
     public int eliminarFigura (int posicion){
         int respuesta=0; //posicion no está dentro de los límites del array
@@ -42,10 +45,49 @@ public class Figuras {
         }
         return respuesta;
     }
+    public boolean eliminarFigura2 (int posicion){
+        boolean respuesta=false;
+        if (lista[posicion]!=null) {
+            lista[posicion] = null;
+            respuesta = true; //figura eliminada correctamente
+        }
+        return respuesta;
+    }
     @Override
     public String toString() {
         return "Figuras{" +
                 "lista=" + Arrays.toString(lista) +
                 '}';
+    }
+    public void mostrar(){
+        for (int i = 0; i < lista.length; i++) {
+            if (lista[i]!=null)
+                System.out.println(lista[i]);
+            else
+                System.out.println("Vacía");
+        }
+    }
+
+    public int getTamanyo() {
+        return lista.length;
+    }
+
+
+    public boolean modificarFigura(int posicion2, double dato) {
+        boolean modificado= false;
+        if (lista[posicion2]!=null){
+            lista[posicion2].setDimension(dato);
+            modificado=true;
+        }
+        return modificado;
+    }
+
+    public boolean modificarFiguraEspecifico(int posicion2, double dato) {
+        boolean modificado= false;
+        if (lista[posicion2]!=null && lista[posicion2] instanceof Circulo){
+            ((Circulo) lista[posicion2]).setDimension(dato);
+            modificado=true;
+        }
+        return modificado;
     }
 }
