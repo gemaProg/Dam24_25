@@ -45,6 +45,12 @@ public class Figuras {
         }
         return respuesta;
     }
+
+    /**
+     *
+     * @param posicion
+     * @return
+     */
     public boolean eliminarFigura2 (int posicion){
         boolean respuesta=false;
         if (lista[posicion]!=null) {
@@ -90,6 +96,7 @@ public class Figuras {
      */
     public boolean modificarFiguraEspecifico(int posicion2, String color) {
         boolean modificado= false;
+       // if (lista[posicion2]!=null && lista[posicion2].getClass().getSimpleName().equalsIgnoreCase("Circulo")){
         if (lista[posicion2]!=null && lista[posicion2] instanceof Circulo){
             ((Circulo) lista[posicion2]).setColor(color);
             modificado=true;

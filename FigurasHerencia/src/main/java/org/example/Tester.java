@@ -88,9 +88,9 @@ public class Tester {
             case 5:
                 System.out.println("Introduzca la posicion de la figura que quiere modificar");
                 posicion2 = lector.nextInt();
-                System.out.println("Introduzca nuevo dato");
-                double dato2 = lector.nextDouble();
-                if (figuras.modificarFiguraEspecifico(posicion2,dato2))
+                System.out.println("Introduzca nuevo color");
+                String colorNuevo = lector.nextLine();
+                if (figuras.modificarFiguraEspecifico(posicion2,colorNuevo))
                     System.out.println("modificado correctamente");
                 else
                     System.out.println("No existe la figura");
