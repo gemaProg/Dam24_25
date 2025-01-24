@@ -89,6 +89,7 @@ public class Tester {
                 System.out.println("Introduzca la posicion de la figura que quiere modificar");
                 posicion2 = lector.nextInt();
                 System.out.println("Introduzca nuevo color");
+                lector.nextLine();
                 String colorNuevo = lector.nextLine();
                 if (figuras.modificarFiguraEspecifico(posicion2,colorNuevo))
                     System.out.println("modificado correctamente");

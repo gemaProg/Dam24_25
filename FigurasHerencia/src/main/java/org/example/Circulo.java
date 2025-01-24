@@ -4,7 +4,7 @@ public class Circulo extends Figura {
     private String color;
     public Circulo(){
         super(1);
-
+        color= "rojo";
     }
     public Circulo(double radio) {
         super(radio);
@@ -32,5 +32,11 @@ public class Circulo extends Figura {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "color='" + color + '\'';
     }
 }
