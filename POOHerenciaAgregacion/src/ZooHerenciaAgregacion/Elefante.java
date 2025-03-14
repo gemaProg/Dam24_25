@@ -27,6 +27,17 @@ public class Elefante extends Animal {
         this.criasActualmenteASuCargo =rnd.nextInt(0, 5);
     }
 
+    /**
+     * constructor que permite crear una instancia de Elefante con los parámetros de entrada
+     * @param nombre que identifica al elefante
+     * @param edad que tiene el elefante
+     * @param peso
+     * @param esHembra
+     * @param kilosComidaSemanales
+     * @param cuidador
+     * @param longitudTrompa
+     * @param criasActualmenteASuCargo
+     */
     public Elefante(String nombre, int edad, float peso, boolean esHembra, float kilosComidaSemanales, String cuidador,
                     int longitudTrompa, int criasActualmenteASuCargo) {
         // primero se invoca al constructor de la clase padre,
@@ -51,6 +62,11 @@ public class Elefante extends Animal {
     // ***************************************
     // Getters
     // ***************************************
+
+    /**
+     *
+     * @return devuelve la longitud de la trompa del elefante
+     */
     public int getLongitudTrompa() {
         return this.longitudTrompa;
     }

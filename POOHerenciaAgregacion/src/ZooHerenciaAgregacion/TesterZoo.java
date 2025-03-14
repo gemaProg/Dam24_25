@@ -7,7 +7,7 @@ public class TesterZoo {
 
     public static void gestionMenu() {
         Scanner lector = new Scanner(System.in);
-        Zoo zoo = new Zoo();
+        Zoo zoo = new Zoo(50);
         int opcion;
         int aux;
         String nuevo_cuidador;
@@ -31,9 +31,14 @@ public class TesterZoo {
                     zoo.mostrarArrrayDeAnimales();
                     break;
                 case 2:
-
+                    if (zoo.hayHueco()!=-1) {
+                        zoo.introducirloZoo(zoo.darAlta());
+                        System.out.println("Animal introducido correctamente");
+                    }else
+                        System.out.printf("No se ha podido dar de alta el animal porque no hay hueco");
                     break;
                 case 3:
+                    zoo.banderaPlayaGrande("CabodeGata");
                     break;
                 case 4:
                     aux = zoo.buscarPrimerMono();

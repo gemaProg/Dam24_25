@@ -25,6 +25,16 @@ public class Mono extends Animal {
         this.tipo =  tipos_mono[rnd.nextInt(0, tipos_mono.length)];
     }
 
+    /***
+     *
+     * @param nombre String que identifica al animal
+     * @param edad
+     * @param peso
+     * @param esHembra
+     * @param kilosComidaSemanales
+     * @param cuidador
+     * @param tipo
+     */
     public Mono(String nombre, int edad, float peso, boolean esHembra, float kilosComidaSemanales, String cuidador,
                 String tipo) {
         // primero se invoca al constructor de la clase padre, luego actualizo
