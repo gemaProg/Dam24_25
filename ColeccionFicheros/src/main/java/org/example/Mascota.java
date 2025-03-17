@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Random;
 
-public class Mascota {
+public class Mascota implements Comparable<Mascota> {
     private String nombre;
     private int edad;
     private String especie;
@@ -50,6 +50,13 @@ public class Mascota {
                 "nombre='" + nombre + '\'' +
                 ", edad=" + edad +
                 ", especie='" + especie + '\'' +
-                '}';
+                '}'+"\n";
+    }
+
+    @Override
+    public int compareTo(Mascota mascota) {
+        //return this.nombre.compareTo(mascota.nombre);
+        //return this.especie.compareTo(mascota.especie);
+        return Integer.compare(this.getEdad(), mascota.getEdad());
     }
 }
