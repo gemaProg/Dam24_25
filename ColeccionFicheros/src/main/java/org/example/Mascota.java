@@ -13,7 +13,12 @@ public class Mascota implements Comparable<Mascota> {
         this.edad = random.nextInt(15);
         this.especie = Constantes.ESPECIE[random.nextInt(Constantes.ESPECIE.length)];;
     }
-
+    public Mascota(String linea){
+        String[] tokens = linea.split(";");
+        this.nombre = tokens[0];
+        this.edad = Integer.parseInt(tokens[1]);
+        this.especie = tokens[2];
+    }
     public Mascota(String nombre, int edad, String especie) {
         this.nombre = nombre;
         this.edad = edad;
@@ -51,6 +56,10 @@ public class Mascota implements Comparable<Mascota> {
                 ", edad=" + edad +
                 ", especie='" + especie + '\'' +
                 '}'+"\n";
+    }
+
+    public String toStringFichero() {
+        return nombre + ';' + edad + ';'+ especie;
     }
 
     @Override
