@@ -11,7 +11,6 @@ public interface GestionElementos {
     public boolean insertarElemento(Elemento Elemento);
     public List<Elemento> listar(String categoria);
     public List<Elemento> listarElementos(boolean ascendente);
-    //public boolean modificarCategoria(String id, String categoria) throws CategoriaException;
     public boolean modificarElemento(String id, String incognita);
     public List<Elemento> getListaElementosCategoria();
     public void eliminarElemento(Elemento Elemento);

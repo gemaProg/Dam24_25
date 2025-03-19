@@ -1,9 +1,11 @@
 package org.example.dao;
 
+import net.datafaker.Faker;
 import org.example.domain.Elemento;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Elementos {
     private final List<Elemento> listaElementos;
@@ -13,6 +15,19 @@ public class Elementos {
     }
     public Elementos(){
         this.listaElementos = new ArrayList<Elemento>();
+        //for y crear para cada categoria unos cuantos elementos
+        /*for (int i = 0; i < 5; i++) {
+            listaElementos.add(new Elemento());
+        }*/
+        Random random = new Random();
+        String categoria = "movies";
+        for (int i = 0; i < 5; i++) {
+            listaElementos.add(new Elemento());
+        }
+        categoria = "personajesTheBigBangTheory";
+        for (int i = 0; i < 5; i++) {
+            listaElementos.add(new Elemento(String.valueOf(random.nextInt(100)),new Faker().bigBangTheory().character(), categoria));
+        }
     }
 
     public List<Elemento> getListaElementos() {

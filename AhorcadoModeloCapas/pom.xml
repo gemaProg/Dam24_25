@@ -7,6 +7,14 @@
     <groupId>org.example</groupId>
     <artifactId>AhorcadoModeloCapas</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!-- https://mvnrepository.com/artifact/net.datafaker/datafaker -->
+    <dependencies>
+        <dependency>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>2.4.2</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
