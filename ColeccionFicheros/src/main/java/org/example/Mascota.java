@@ -58,14 +58,25 @@ public class Mascota implements Comparable<Mascota> {
                 '}'+"\n";
     }
 
+    /*public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(nombre);
+        sb.append(";");
+        sb.append(edad);
+        sb.append(";");
+        sb.append(especie);
+        sb.append("\n");
+        return sb.toString();
+    }*/
+
     public String toStringFichero() {
         return nombre + ';' + edad + ';'+ especie;
     }
 
     @Override
     public int compareTo(Mascota mascota) {
-        //return this.nombre.compareTo(mascota.nombre);
+        return this.nombre.compareTo(mascota.nombre);
         //return this.especie.compareTo(mascota.especie);
-        return Integer.compare(this.getEdad(), mascota.getEdad());
+        //return Integer.compare(this.getEdad(), mascota.getEdad());
     }
 }

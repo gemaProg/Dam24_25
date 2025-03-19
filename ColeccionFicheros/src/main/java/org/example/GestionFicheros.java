@@ -11,23 +11,24 @@ import java.util.Scanner;
 public class GestionFicheros {
     public static void escribirFichero(String fichero, List<Mascota> lista) {
         PrintWriter escribir = null;
+        //escribir = new PrintWriter("C:\\Users\\gema\\IdeaProjects\\SegundaEvaluacion\\ColeccionFicheros\\Mascotas.txt");
         try {
-            //escribir = new PrintWriter("C:\\Users\\gema\\IdeaProjects\\SegundaEvaluacion\\ColeccionFicheros\\Mascotas.txt");
-            escribir = new PrintWriter(new FileOutputStream(fichero));
+            escribir = new PrintWriter(fichero);
+            for (int i = 0; i < lista.size(); i++)
+                escribir.println(lista.get(i).toStringFichero());
+            escribir.close();
         } catch (FileNotFoundException e) {
             System.out.println("No se puede escribir el fichero, no se ha encontrado");
         }
-        for (int i = 0; i < lista.size(); i++)
-            escribir.println(lista.get(i).toStringFichero());
-        escribir.close();
     }
+
     public static List<Mascota> leerFichero(String fichero) {
         List<Mascota> lista = new ArrayList<Mascota>();
         try {
            /* File f = new File(fichero);
             Scanner lector = new Scanner(f);*/
             Scanner lector = new Scanner(new File(fichero));
-            while(lector.hasNextLine()){
+            while (lector.hasNextLine()) {
                 String linea = lector.nextLine();
                 /*String[] tokens = linea.split(";");
                 String nombre = tokens[0];
@@ -38,7 +39,8 @@ public class GestionFicheros {
             }
 
         } catch (FileNotFoundException e) {
-            System.out.println("Fichero no encontrado");;
+            System.out.println("Fichero no encontrado");
+            ;
         }
         return lista;
 

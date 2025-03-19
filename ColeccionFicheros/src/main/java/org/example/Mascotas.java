@@ -2,7 +2,6 @@ package org.example;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -36,9 +35,9 @@ public class Mascotas {
                 System.out.println(mascotas.get(i));
             }
         }
-        /*for (Mascota mascota : mascotas) {
-            if (mascota.getEspecie().equalsIgnoreCase(especie)) {
-                System.out.println(mascota);
+        /*for (Mascota elemento : mascotas) {
+            if (elemento.getEspecie().equalsIgnoreCase(especie)) {
+                System.out.println(elemento);
             }
         }*/
     }
@@ -53,6 +52,7 @@ public class Mascotas {
     }
 
     public void ordenar() {
+        //Mascota lista[] = mascotas.toArray(new Mascota[0]);
         //Arrays.sort(lista);
         Collections.sort(mascotas);
     }
