@@ -10,7 +10,7 @@ public class Mascotas {
 
     public Mascotas() {
         File file = new File(Constantes.MASCOTAS_FILE);
-        System.out.println(file.getAbsoluteFile());
+        //System.out.println(file.getAbsoluteFile());
         if (file.exists())
             mascotas = GestionFicheros.leerFichero(Constantes.MASCOTAS_FILE);
         else {
