@@ -31,6 +31,11 @@ public class DaoElementosImplementacion implements DaoElementos {
     }
 
     @Override
+    public List<Elemento> getElementos() {
+        return lista.getListaElementos();
+    }
+
+    @Override
     public List<Elemento> getElementosCategoria(String categoria) {
         return List.of();
     }

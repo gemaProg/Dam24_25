@@ -8,6 +8,7 @@ public interface DaoElementos {
     public boolean isEmptyElementosList() ;
     public boolean insertarElemento(Elemento Elemento) ;
     public boolean insertarElemento(int id, String palabra, String categoria);
+    public List<Elemento> getElementos();
     public List<Elemento> getElementosCategoria(String categoria);
     public List<Elemento> listadoOrdenado(boolean ascendente);
     public boolean modificarCategoria(int id, String categoria);

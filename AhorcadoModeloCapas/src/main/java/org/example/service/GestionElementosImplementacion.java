@@ -25,7 +25,7 @@ public class GestionElementosImplementacion implements GestionElementos{
 
     @Override
     public List<Elemento> getListaElementos() {
-        return List.of();
+        return  daoElementos.getElementos();
     }
 
     @Override
