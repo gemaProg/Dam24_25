@@ -1,0 +1,10 @@
+Juan;13;Serpiente
+Juan;0;Pájaro
+Juan;7;Gato
+Linda;10;Serpiente
+Linda;9;Pájaro
+Linda;9;Gato
+Paco;3;Perro
+Paco;1;Pájaro
+Pou;10;Gato
+Pou;1;Pájaro
