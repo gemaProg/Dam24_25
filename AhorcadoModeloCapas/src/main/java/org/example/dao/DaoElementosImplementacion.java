@@ -22,7 +22,8 @@ public class DaoElementosImplementacion implements DaoElementos {
 
     @Override
     public boolean insertarElemento(Elemento Elemento) {
-        return false;
+        //return lista.getListaElementos().add(Elemento);
+        return lista.insertarElemento(Elemento);
     }
 
     @Override

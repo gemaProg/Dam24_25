@@ -1,5 +1,6 @@
 package org.example.ui;
 
+import org.example.common.Constantes;
 import org.example.service.GestionElementos;
 import org.example.service.GestionElementosImplementacion;
 
@@ -7,8 +8,10 @@ import org.example.service.GestionElementosImplementacion;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Vamos a mostrar el diccionario");
+        System.out.println(Constantes.BIENVENIDA);
         GestionElementos ge = new GestionElementosImplementacion();
         System.out.println(ge.getListaElementos());
+        EntradaSalida.mostrarListaElementos(ge);
+        ge.insertarElemento(EntradaSalida.insertarElemento());
     }
 }

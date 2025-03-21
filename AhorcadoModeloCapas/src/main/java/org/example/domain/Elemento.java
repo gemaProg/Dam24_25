@@ -53,7 +53,7 @@ public class Elemento {
                 "id='" + id + '\'' +
                 ", palabra='" + palabra + '\'' +
                 ", categoria='" + categoria + '\'' +
-                '}';
+                '}'+"\n";
     }
     public String toStringFichero(){
         StringBuilder sb = new StringBuilder();

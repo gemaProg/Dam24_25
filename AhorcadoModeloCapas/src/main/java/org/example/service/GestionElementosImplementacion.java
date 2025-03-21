@@ -30,7 +30,7 @@ public class GestionElementosImplementacion implements GestionElementos{
 
     @Override
     public boolean insertarElemento(Elemento Elemento) {
-        return false;
+        return daoElementos.insertarElemento(Elemento);
     }
 
     @Override

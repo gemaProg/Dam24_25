@@ -31,7 +31,9 @@ public class Elementos {
     }
 
     public List<Elemento> getListaElementos() {
-        return listaElementos;
+       return listaElementos;
+       //por seguridad puedo devolver otro arrayList con los mismos elementos
+       //return new ArrayList<>(listaElementos);
     }
     public void vaciarListaElementos(List<Elemento> listaElementos) {
         listaElementos.clear();
@@ -43,5 +45,9 @@ public class Elementos {
         return "Elementos{" +
                 "listaElementos=" + listaElementos +
                 '}';
+    }
+
+    public boolean insertarElemento(Elemento elemento) {
+        return listaElementos.add(elemento);
     }
 }
