@@ -8,6 +8,7 @@ public class Mascota implements Comparable<Mascota>, Serializable {
     private int edad;
     private String especie;
 
+
     public Mascota() {
         Random random = new Random();
         this.nombre = Constantes.NOMBRES[random.nextInt(Constantes.NOMBRES.length)];
