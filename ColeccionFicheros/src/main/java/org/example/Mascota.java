@@ -1,8 +1,9 @@
 package org.example;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Mascota implements Comparable<Mascota> {
+public class Mascota implements Comparable<Mascota>, Serializable {
     private String nombre;
     private int edad;
     private String especie;

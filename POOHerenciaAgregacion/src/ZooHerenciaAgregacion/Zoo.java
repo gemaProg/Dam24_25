@@ -18,7 +18,7 @@ public class Zoo {
     public Zoo(int tamanyo) {
         lista = new Animal[tamanyo];
         Random rnd = new Random();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < lista.length; i++) {
             switch (rnd.nextInt(0, 3)) {
                 case 0:
                     // Uso el constructor con parámetros

@@ -9,10 +9,12 @@ public class Mascotas {
     private List<Mascota> mascotas;
 
     public Mascotas() {
-        File file = new File(Constantes.MASCOTAS_FILE);
+        File file = new File(Constantes.MASCOTAS_BINARY_FILE);
         //System.out.println(file.getAbsoluteFile());
         if (file.exists())
-            mascotas = GestionFicheros.leerFichero(Constantes.MASCOTAS_FILE);
+            //mascotas = GestionFicheros.leerFichero(Constantes.MASCOTAS_FILE);
+            //mascotas = GestionFicheros.leerFicheroBRFR(Constantes.MASCOTAS_FILE);
+            mascotas = GestionFicheros.leerFicheroBinario(Constantes.MASCOTAS_BINARY_FILE);
         else {
             mascotas = new ArrayList<Mascota>();
             for (int i = 0; i < 10; i++) {

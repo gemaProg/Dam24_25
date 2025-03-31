@@ -13,7 +13,8 @@ public class Elementos {
     public Elementos(List<Elemento> listaElementos) {
         this.listaElementos = listaElementos;
     }
-    public Elementos(){
+
+    public Elementos() {
         this.listaElementos = new ArrayList<Elemento>();
         //for y crear para cada categoria unos cuantos elementos
         /*for (int i = 0; i < 5; i++) {
@@ -26,15 +27,17 @@ public class Elementos {
         }
         categoria = "personajesTheBigBangTheory";
         for (int i = 0; i < 5; i++) {
-            listaElementos.add(new Elemento(String.valueOf(random.nextInt(100)),new Faker().bigBangTheory().character(), categoria));
+            listaElementos.add(new Elemento(String.valueOf(random.nextInt(100)), new Faker().bigBangTheory().character(), categoria));
         }
+
     }
 
     public List<Elemento> getListaElementos() {
-       return listaElementos;
-       //por seguridad puedo devolver otro arrayList con los mismos elementos
-       //return new ArrayList<>(listaElementos);
+        return listaElementos;
+        //por seguridad puedo devolver otro arrayList con los mismos elementos
+        //return new ArrayList<>(listaElementos);
     }
+
     public void vaciarListaElementos(List<Elemento> listaElementos) {
         listaElementos.clear();
         this.listaElementos.addAll(listaElementos);
@@ -49,5 +52,11 @@ public class Elementos {
 
     public boolean insertarElemento(Elemento elemento) {
         return listaElementos.add(elemento);
+    }
+
+
+    public List<Elemento> getListaElementosCategoria(String categoria) {
+
+        return null;
     }
 }

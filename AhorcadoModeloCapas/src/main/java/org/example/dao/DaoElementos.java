@@ -15,4 +15,5 @@ public interface DaoElementos {
     public boolean modificarElemento(int id, String palabra);
     public void eliminarElemento(Elemento Elemento) ;
     public boolean eliminarElemento(int id) ;
-    }
+    public String getPalabraAdivinar(String categoria);
+}

@@ -13,5 +13,6 @@ public class Main {
         System.out.println(ge.getListaElementos());
         EntradaSalida.mostrarListaElementos(ge);
         ge.insertarElemento(EntradaSalida.insertarElemento());
+
     }
 }

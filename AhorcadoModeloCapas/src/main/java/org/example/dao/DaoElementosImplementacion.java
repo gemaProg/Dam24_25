@@ -3,6 +3,7 @@ package org.example.dao;
 import org.example.domain.Elemento;
 
 import java.util.List;
+import java.util.Random;
 
 public class DaoElementosImplementacion implements DaoElementos {
     private Elementos lista;
@@ -38,7 +39,7 @@ public class DaoElementosImplementacion implements DaoElementos {
 
     @Override
     public List<Elemento> getElementosCategoria(String categoria) {
-        return List.of();
+        return lista.getListaElementosCategoria(categoria);
     }
 
     @Override
@@ -64,5 +65,13 @@ public class DaoElementosImplementacion implements DaoElementos {
     @Override
     public boolean eliminarElemento(int id) {
         return false;
+    }
+
+    @Override
+    public String getPalabraAdivinar(String categoria) {
+        Random random = new Random();
+        System.out.println(getElementosCategoria(categoria).size());
+        System.out.println(getElementosCategoria(categoria));
+        return getElementosCategoria(categoria).get(random.nextInt(0,getElementosCategoria(categoria).size())).getPalabra();
     }
 }

@@ -34,6 +34,11 @@ public class GestionElementosImplementacion implements GestionElementos{
     }
 
     @Override
+    public String getPalabraAdivinar(String categoria) {
+        return daoElementos.getPalabraAdivinar(categoria);
+    }
+
+    @Override
     public List<Elemento> listar(String categoria) {
         return List.of();
     }
@@ -49,7 +54,7 @@ public class GestionElementosImplementacion implements GestionElementos{
     }
 
     @Override
-    public List<Elemento> getListaElementosCategoria() {
+    public List<Elemento> getListaElementosCategoria(String categoria) {
         return List.of();
     }
 

@@ -11,8 +11,8 @@ public class Main {
         //misMascotas.listar("gato");
         misMascotas.ordenar();
         System.out.println(misMascotas);
-        GestionFicheros.escribirFichero(Constantes.MASCOTAS_FILE, misMascotas.getMascotas());
-
-
+        //GestionFicheros.escribirFichero(Constantes.MASCOTAS_FILE, misMascotas.getMascotas());
+        //GestionFicheros.escribirFicheroFW(Constantes.MASCOTAS_FILE, misMascotas.getMascotas());
+        GestionFicheros.escribirFicheroBinario(Constantes.MASCOTAS_BINARY_FILE, misMascotas.getMascotas());
     }
 }

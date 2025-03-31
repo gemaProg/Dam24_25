@@ -25,10 +25,10 @@ public class Mono extends Animal {
         this.tipo =  tipos_mono[rnd.nextInt(0, tipos_mono.length)];
     }
 
-    /***
-     *
-     * @param nombre String que identifica al animal
-     * @param edad
+    /**
+     * Método que me permite construir un Mono
+     * @param nombre String
+     * @param edad entero que
      * @param peso
      * @param esHembra
      * @param kilosComidaSemanales
@@ -55,6 +55,11 @@ public class Mono extends Animal {
     // ***************************************
     // Getters
     // ***************************************
+
+    /**
+     *
+     * @return
+     */
     public String getTipo() {
         return this.tipo;
     }
