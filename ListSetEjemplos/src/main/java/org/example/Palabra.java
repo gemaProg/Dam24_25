@@ -82,7 +82,7 @@ public class Palabra implements Comparable<Palabra> {
     @Override
     public int compareTo(Palabra o) {
         return this.adivinarString.compareTo(o.adivinarString);
-        //return Integer.compare(id, o.id);
+        //return Integer.compare(this.id, o.id);
     }
 
 }
