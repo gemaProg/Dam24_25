@@ -146,4 +146,8 @@ public class Zoo {
         }
         return respuesta;
     }
+    public double calcular(){
+
+        for
+    }
 }
