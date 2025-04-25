@@ -20,7 +20,7 @@ import static java.util.stream.Collectors.*;
  */
 public class Censo implements Serializable {
     
-    public static final String[] provincias = {"Ciudad Real", "Toledo", "Albacete", "Cuenca", "Guadalajara"};
+    public static final String[] provincias = {"Leon","Avila","Ciudad Real", "Toledo", "Albacete", "Cuenca", "Guadalajara"};
     protected List<Individuo> censo;
 
     public Censo(List<Individuo> censo) {
@@ -47,6 +47,8 @@ public class Censo implements Serializable {
         censo.add(new Individuo((int) (Math.random() * 5)+18, "Marcella",provincias[(int)(Math.random()*5)] ));
         censo.add(new Individuo((int) (Math.random() * 5)+18, "Carlos",provincias[(int)(Math.random()*5)] ));
         censo.add(new Individuo((int) (Math.random() * 5)+18, "Alexander",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Alexander",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Andres",provincias[(int)(Math.random()*5)] ));
 
         //sucesivas, carga de fichero
         //censo = GestorFicheros.leerFicheroBinario(GestorFicheros.FICHERO_BINARIO).censo;
@@ -71,9 +73,9 @@ public class Censo implements Serializable {
         }
         //2.stream, foreach y expresión lambda
         System.out.println("-------------------------2-------------------------");
+
         //censo.stream().forEach(individuo -> System.out.println(individuo));
         censo.forEach(individuo -> System.out.println(individuo));
-
 
         //3. stream, foreach y referencia a método
         System.out.println("-------------------------3-------------------------");
@@ -87,11 +89,11 @@ public class Censo implements Serializable {
 
 
     public void mostrar(String nombre) {
-        for (int i = 0; i < censo.size(); i++) {
+        /*for (int i = 0; i < censo.size(); i++) {
             if (censo.get(i).nombre.equalsIgnoreCase(nombre)) {
                 System.out.println(censo.get(i));
             }
-        }
+        }*/
         //1. foreach
         System.out.println("---------------------1--------------------");
         for (Individuo aux: censo) {
@@ -118,7 +120,7 @@ public class Censo implements Serializable {
         List<String> listProvinciasRMdistintas2 = list.stream().map(Individuo::getPoblacion).distinct().toList();
         System.out.println("---------------");
         System.out.println(listProvinciasRMdistintas2);
-        List<Integer> edadesProvincia = list.stream().map(Individuo::getEdad).toList();
+        List<Integer> edadesProvincia = censo.stream().map(Individuo::getEdad).toList();
         System.out.println("---------------");
         System.out.println(edadesProvincia);
 
@@ -148,11 +150,11 @@ public class Censo implements Serializable {
     }
 
     public void mostrarMayores(int edad) {
-        for (int i = 0; i < censo.size(); i++) {
+        /*for (int i = 0; i < censo.size(); i++) {
             if (censo.get(i).edad > edad) {
                 System.out.print(censo.get(i));
             }
-        }
+        }*/
         //1. foreach
         System.out.println("---------------------1--------------------");
         for (Individuo individuo: censo) {
@@ -172,7 +174,7 @@ public class Censo implements Serializable {
         /*int contador = 0;
         for (int i = 0; i < censo.size(); i++) {
             if (censo.get(i).poblacion.equalsIgnoreCase(provincia)) {
-             contador++;
+                contador++;
             }
         }
         return contador;*/
@@ -198,11 +200,11 @@ public class Censo implements Serializable {
         //censo.stream().filter(individuo -> individuo.edad>edad && individuo.poblacion.equalsIgnoreCase(provincia)).forEach(individuo -> System.out.print(individuo));
         censo.stream().filter(individuo -> individuo.edad>edad).filter(individuo->individuo.poblacion.equalsIgnoreCase(provincia)).forEach(individuo -> System.out.print(individuo));
     }
-    public double maxEdadrovincia(String provincia){
+    public double maxEdadProvincia(String provincia){
         /*int maximo = 0;
         for (int i = 0; i < censo.size(); i++) {
             if (censo.get(i).poblacion.equalsIgnoreCase(provincia) && censo.get(i).edad>maximo) {
-             maximo = censo.get(i).edad;
+                maximo = censo.get(i).edad;
             }
         }
         return maximo;*/
@@ -307,11 +309,11 @@ public class Censo implements Serializable {
             if (individuo.nombre.equalsIgnoreCase(nombre)) {
                 individuo.poblacion = poblacion;
             }
-        }
+        }*/
         //2. Stream
         Individuo encontrado = censo.stream().filter(individuo -> individuo.nombre.equalsIgnoreCase(nombre)).findFirst().orElse(null);
         if(encontrado!=null)
-            encontrado.poblacion=poblacion;*/
+            encontrado.poblacion=poblacion;
 
         //2a. Stream y chequeo si null directamente
         censo.stream().filter(individuo -> individuo.nombre.equalsIgnoreCase(nombre)).findAny().ifPresent(individuo -> individuo.poblacion = poblacion);
@@ -351,7 +353,7 @@ public class Censo implements Serializable {
     }
 
     public List<Individuo> eliminarIndividuosProvincia(String provincia){
-       /* censo.removeAll(censo.stream().filter(individuo -> individuo.poblacion.equalsIgnoreCase(provincia)).toList());
+        /*censo.removeAll(censo.stream().filter(individuo -> individuo.poblacion.equalsIgnoreCase(provincia)).toList());
         return censo;*/
         return censo.stream().filter(individuo -> !individuo.poblacion.equalsIgnoreCase(provincia)).toList(); //en realidad no elimina, es sólo consulta
     }
@@ -380,7 +382,7 @@ public class Censo implements Serializable {
         censo.stream().sorted(new Comparator<Individuo>() {
             @Override
             public int compare(Individuo o1, Individuo o2) {
-                return Integer.compare(o1.edad,o2.edad);
+                return 0;
             }
         }).forEach(System.out::println);
     }

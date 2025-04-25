@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Map<String, String> objMap = new HashMap<>();
+       /* Map<String, String> objMap = new HashMap<>();
         objMap.put("Nombre", "Suzuki");
         objMap.put("Potencia", "220");
         objMap.put("Tipo", "2-wheeler");
@@ -27,7 +27,7 @@ public class Main {
         }
 
         //otro ejemplo
-       /* HashMap<String, Integer> prices = new HashMap<>();
+        HashMap<String, Integer> prices = new HashMap<>();
         prices.put("Mustang", 10000);
         prices.put("Megane", 55000);
         prices.put("Toledo", 44300);
@@ -56,6 +56,7 @@ public class Main {
             System.out.println(k+ "  "+ v);
         });
 
+         */
         Map<Integer,String> mapa = new HashMap<>();
         for(int i=100;i>0;i--){
             mapa.put(i,"lenguaje"+i);
@@ -99,11 +100,11 @@ public class Main {
 
         mapa.keySet().stream().forEach(c-> System.out.println("Clave:"+ c + "="+ " Valor: "+ mapa.get(c)));
         System.out.println("---------------Sólo muestra aquellas claves que cumplen un filtrado-----------------");
-        mapa.keySet().stream().filter(k->k.intValue()>=20 && k.intValue()<=30).forEach(System.out::println);
+        mapa.keySet().stream().filter(k->k>=20 && k <=30).forEach(System.out::println);
         System.out.println("--------------Listando solo valores-------------------");
         mapa.values().stream().filter(s->s.contains("9")).forEach(System.out::println);
         System.out.println("--------------Listando solo los valores que cumplen una condición-------------------");
         mapa.values().stream().filter(c->c.contains("1")).forEach(c-> System.out.println("asdf"+c));
-*/
+
     }
 }

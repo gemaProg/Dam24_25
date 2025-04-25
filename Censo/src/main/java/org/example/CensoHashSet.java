@@ -36,34 +36,20 @@ public class CensoHashSet implements Serializable {
             censo.add(aux);
             censo.add(new Individuo((int) (Math.random() * 100), "individuo" + (i + 1), "provincia" + (i % 3)));
         }*/
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Olga",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Sergio",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Claudia",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Aitor",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Óscar",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo(20, "Félix",provincias[1] ));
-        for (int i = 0; i < 10; i++) {
-            censo.add(new Individuo((int) (Math.random() * 10)+18, "Félix",provincias[(int)(Math.random()*5)] ));
-        }
-
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Máximo",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Maksim",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Daniel Muñoz",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Daniel Sánchez",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Jorge Navarro",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Jorge Novillo",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Diego Fabrizio",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Franklin",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Diego Pacheco",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Milton",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Adrián",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Marcos",provincias[(int)(Math.random()*5)]));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Iván",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Adriel",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Nerea",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Mario",provincias[(int)(Math.random()*5)] ));
-        censo.add(new Individuo((int) (Math.random() * 10)+18, "Marta",provincias[(int)(Math.random()*5)] ));
-       
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Jorge",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Nerea",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Älvaro",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Kevin",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Juancito",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Juan",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Roberto",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Ramón",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Luna",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Marcella",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Carlos",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Alexander",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Alexander",provincias[(int)(Math.random()*5)] ));
+        censo.add(new Individuo((int) (Math.random() * 5)+18, "Andres",provincias[(int)(Math.random()*5)] ));
         //sucesivas, carga de fichero
         //censo = GestorFicheros.leerFicheroBinario(GestorFicheros.FICHERO_BINARIO).censo;
     }
@@ -77,9 +63,6 @@ public class CensoHashSet implements Serializable {
     }
 
     public void listar() {
-        /*for (int i = 0; i < censo.size(); i++) {
-            System.out.print(censo.get(i));
-        }*/
         //1.foreach
         System.out.println("-------------------------1-------------------------");
         for (Individuo individuo:censo) {
@@ -105,13 +88,9 @@ public class CensoHashSet implements Serializable {
         return censo.stream().filter(i->i.equals(individuo)).findFirst().orElse(null) != null;
 
     }
-/*
+
     public void mostrar(String nombre) {
-        for (int i = 0; i < censo.size(); i++) {
-            if (censo.get(i).nombre.equalsIgnoreCase(nombre)) {
-                System.out.println(censo.get(i));
-            }
-        }
+
         //1. foreach
         System.out.println("---------------------1--------------------");
         for (Individuo aux: censo) {
@@ -143,11 +122,7 @@ public class CensoHashSet implements Serializable {
 
     public void mostrarPoblacion(String poblacion) {
 
-        for (int i = 0; i < censo.size(); i++) {
-            if (censo.get(i).poblacion.equalsIgnoreCase(poblacion)) {
-                System.out.println(censo.get(i));
-            }
-        }
+
         //1. foreach
         System.out.println("---------------------1--------------------");
         for (Individuo individuo: censo) {
@@ -165,11 +140,7 @@ public class CensoHashSet implements Serializable {
     }
 
     public void mostrarMayores(int edad) {
-        for (int i = 0; i < censo.size(); i++) {
-            if (censo.get(i).edad > edad) {
-                System.out.print(censo.get(i));
-            }
-        }
+
         //1. foreach
         System.out.println("---------------------1--------------------");
         for (Individuo individuo: censo) {
@@ -186,22 +157,12 @@ public class CensoHashSet implements Serializable {
     }
 
     public long individuosConteoProvincia(String provincia){
-        /*int contador = 0;
-        for (int i = 0; i < censo.size(); i++) {
-            if (censo.get(i).poblacion.equalsIgnoreCase(provincia)) {
-             contador++;
-            }
-        }
-        return contador;
+
+        //return contador;
         return censo.stream().filter(individuo -> individuo.poblacion.equalsIgnoreCase(provincia)).count();
     }
     public void mostrarMayores(int edad, String provincia) {
-        for (int i = 0; i < censo.size(); i++) {
-            if (censo.get(i).edad > edad && censo.get(i).poblacion.equalsIgnoreCase(provincia)) {
-                System.out.print(censo.get(i));
-            }
-        }
-        System.out.println();
+
         //1. foreach
         System.out.println("---------------------1--------------------");
         for (Individuo individuo: censo) {
@@ -216,13 +177,7 @@ public class CensoHashSet implements Serializable {
         censo.stream().filter(individuo -> individuo.edad>edad).filter(individuo->individuo.poblacion.equalsIgnoreCase(provincia)).forEach(individuo -> System.out.print(individuo));
     }
     public double maxEdadrovincia(String provincia){
-        /*int maximo = 0;
-        for (int i = 0; i < censo.size(); i++) {
-            if (censo.get(i).poblacion.equalsIgnoreCase(provincia) && censo.get(i).edad>maximo) {
-             maximo = censo.get(i).edad;
-            }
-        }
-        return maximo;
+
         //1. for each
         /*int maximo = 0;
         for (Individuo individuo: censo) {
@@ -230,7 +185,7 @@ public class CensoHashSet implements Serializable {
                 maximo = individuo.edad;
             }
         }
-        return maximo;
+        return maximo;*/
         return censo.stream().filter(individuo -> individuo.poblacion.equalsIgnoreCase(provincia)).mapToInt(individuo->individuo.edad).average().orElse(0);
         //si no encuentra devuelve 0 como edad máxima.
         //lo mismo con min, average (hacerlo), sum
@@ -238,7 +193,7 @@ public class CensoHashSet implements Serializable {
     public void mapeoIndividuosCadenas(){
         censo.stream().map(individuo -> individuo.nombre).sorted().forEach(System.out::println);
         System.out.println("-------------sólo distintos---------");
-        /*censo.stream().map(individuo -> individuo.nombre).sorted(new Comparator<String>() {
+        censo.stream().map(individuo -> individuo.nombre).sorted(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return Integer.compare(o1.length(),o2.length());
@@ -332,7 +287,7 @@ public class CensoHashSet implements Serializable {
     public void alta() throws IOException {
         Individuo aux = Alta();
         if (!censo.contains(aux))
-        censo.add(Alta());
+            censo.add(Alta());
     }
 
     public static Individuo Alta() throws IOException {
@@ -342,36 +297,21 @@ public class CensoHashSet implements Serializable {
     }
 
     public void baja(String nombre, String poblacion) {
-        /*boolean borrado=false;
-        for (int i = 0; i < censo.size()&&!borrado; i++) {
-            if (censo.get(i).nombre.equalsIgnoreCase(nombre)&& censo.get(i).poblacion.equalsIgnoreCase(poblacion)) {
-                censo.remove(i);
-                borrado=true;
-            }
 
-        }
         censo.removeIf(i->i.nombre.equalsIgnoreCase(nombre) && i.poblacion.equalsIgnoreCase(poblacion));
     }
-    public void baja(String poblacion) {
-        for (int i = 0; i < censo.size(); i++) {
-            if (censo.get(i).poblacion.equalsIgnoreCase(poblacion)) {
-                censo.remove(i);
-                i--;
-            }
-        }
-    }
+
 
     public List eliminarIndividuosProvincia(String provincia){
         //censo.removeAll(censo.stream().filter(individuo -> individuo.poblacion.equalsIgnoreCase(provincia)).collect(Collectors.toList()));
-        /*censo.removeAll(censo.stream().filter(individuo -> individuo.poblacion.equalsIgnoreCase(provincia)).toList());
+        censo.removeAll(censo.stream().filter(individuo -> individuo.poblacion.equalsIgnoreCase(provincia)).toList());
         System.out.println("ELiminando");
         listar();
         return censo.stream().filter(individuo -> !individuo.poblacion.equalsIgnoreCase(provincia)).collect(Collectors.toList());
-
     }
 
     public void ordenar() {
-        Collections.sort(censo);
+        /*Collections.sort(censo);
         System.out.println("orden natural----");
         listar();
         censo.sort(new porEdad());
@@ -380,7 +320,7 @@ public class CensoHashSet implements Serializable {
         Collections.sort(censo, new porPoblacion());
         System.out.println("orden poblacion----");
         listar();
-
+        */
         System.out.println("---------------------Con streams---------------------");
         System.out.println("orden natural----");
         censo.stream().sorted().forEach(System.out::println);
@@ -401,5 +341,5 @@ public class CensoHashSet implements Serializable {
     public List devolverListadoOrdenado (boolean ascendente){
         return censo.stream().sorted(ascendente ? new porPoblacion() : new porPoblacion().reversed()).collect(Collectors.toList());
     }
-*/
+
 }
