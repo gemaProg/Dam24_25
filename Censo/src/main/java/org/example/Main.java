@@ -58,7 +58,7 @@ public class Main {
                     case 7:
                         System.out.println("Dime poblacion");
                         poblacion3 = br.readLine();
-                        System.out.println(censo.maxEdadrovincia(poblacion3));
+                        System.out.println(censo.maxEdadProvincia(poblacion3));
                         break;
                     case 8:
                         System.out.println("Dime poblacion");
